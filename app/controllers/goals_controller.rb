@@ -11,7 +11,7 @@ class GoalsController < ApplicationController
   # GET /goals/1
   # GET /goals/1.json
   def show
-    render json: @goal
+    render json: @goal, root:false
   end
 
   # GET /goals/new
