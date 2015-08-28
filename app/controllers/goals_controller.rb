@@ -29,7 +29,7 @@ class GoalsController < ApplicationController
     @goal = Goal.new(goal_params)
     steps = params[:steps]
     steps.each do |step|
-      @goal.steps.build step.permit(:name)
+      @goal.steps.build step.permit(:name, :due_date)
     end
 
     respond_to do |format|
